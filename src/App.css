@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center; 
+    align-items: center; 
+    padding-top: 100px;
+  
+
 }
 
 
@@ -14,8 +18,12 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 250px;
+  max-width: 100%;
+  box-sizing: border-box;
+  
 
 }
+
 
 .tag-list {
   margin-top: 10px;
@@ -25,7 +33,6 @@
   justify-content: center;
 }
 
-
 .tag-item {
   padding: 6px 12px;
   background: #eee;
@@ -34,6 +41,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  word-break: break-word;
+  
 }
 
 .tag-close {
@@ -42,4 +51,38 @@
   font-size: 16px;
   cursor: pointer;
   line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .tag-container {
+    padding: 12px;
+  }
+  .tag-input {
+    width: 100%;
+    font-size: 15px;
+  }
+  .tag-item {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+  .tag-close {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tag-container {
+    padding: 8px;
+  }
+  .tag-input {
+    font-size: 14px;
+    padding: 7px;
+  }
+  .tag-item {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  .tag-close {
+    font-size: 14px;
+  }
 }
